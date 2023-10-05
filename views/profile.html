@@ -1,0 +1,24 @@
+{% extends 'base.html.njk' %}
+
+{% block title %}
+Profile Page
+{% endblock %}
+
+{% block content %}
+<h4>This is your profile page</h4>
+
+<p>These are your favorite foods:</p>
+
+{% if array %}
+
+    {% for food in array %}
+        <li>{{ food }}</li>
+    {% endfor %}
+
+{% endif %}
+
+{% for key, value in myObj %}
+    <li>{{ value.key2 }}</li>
+{% endfor %}
+
+{% endblock %}
